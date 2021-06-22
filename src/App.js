@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {AppBar, IconButton, Typography} from "@material-ui/core";
+import { Toolbar } from '@material-ui/core';
+import Menu from '@material-ui/icons/Menu';
+import SimpleCard from './Home/Card'
+import BottomCard from './Home/BottomCard'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar position="sticky">
+      <Toolbar>
+        <IconButton aria-label="app" color="inherit">
+          <Menu />
+        </IconButton>
+        <Typography variant="h6">Betting</Typography>
+      </Toolbar>
+      </AppBar>
+      <SimpleCard/>
+      <BottomCard paddingBottom={2}/>
     </div>
   );
 }
